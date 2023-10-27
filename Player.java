@@ -19,17 +19,18 @@ public class Player {
         this.name = name;
     }
 
-    public takeDamage(int damage){
-        if(damage > this.defense){
-this.health -= (damage - this.defense);
-        }
-        
+    public int getHealth() {
+        return health;
     }
 
-    public attackPlayer(){Player currPlayer, int damage}
+    public void takeDamage(int damage) {
+        if (damage > this.defense) {
+            this.health -= (damage - this.defense);
+        }
+    }
 
-    {
-
+    public void attackPlayer(Player currPlayer) {
+        currPlayer.takeDamage(this.attack);
     }
 
     public static void main(String[] args) {
