@@ -1,10 +1,12 @@
-public class Player {
+package Hero;
+
+public class Hero {
     private String name;
     private int health;
     private int attack;
     private int defense;
 
-    Player(String name, int health, int attack, int defense) {
+    public Hero(String name, int health, int attack, int defense) {
         this.name = name;
         this.health = health;
         this.attack = attack;
@@ -29,8 +31,8 @@ public class Player {
         }
     }
 
-    public void attackPlayer(Player currPlayer) {
-        currPlayer.takeDamage(this.attack);
+    public void attackHero(Hero currHero) {
+        currHero.takeDamage(this.attack);
     }
 
     public static void main(String[] args) {
